@@ -5,19 +5,23 @@ add_compile_options(-std=c++17)
 
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(rclcpp_components REQUIRED)
 find_package(urdf REQUIRED)
 find_package(champ REQUIRED)
 find_package(champ_msgs REQUIRED)
-find_package(gazebo_ros2_control REQUIRED)
-find_package(gazebo_ros REQUIRED)
+find_package(gz_ros2_control REQUIRED)
+find_package(ros_gz_sim REQUIRED)
+find_package(gz-sim8 REQUIRED)
 
 set(dependencies
   rclcpp
+  rclcpp_components
   urdf
   champ
   champ_msgs
-  gazebo_ros2_control
-  gazebo_ros
+  gz_ros2_control
+  ros_gz_sim
+  gz-sim8
 )
 
 install(PROGRAMS
