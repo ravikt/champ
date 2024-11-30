@@ -16,11 +16,9 @@ Core Features:
 - Demo Applications like [TOWR](https://github.com/ethz-adrl/towr) and [chicken head](https://github.com/chvmp/chicken_head) stabilization.
 - Lightweight C++ header-only [library](https://github.com/chvmp/libchamp) that can run on both SBC and micro-controllers.
 
-Tested on:
+The repository is under development on:
 
-- Ubuntu 16.04 (ROS Kinetic)
-- Ubuntu 18.04 (ROS Melodic)
-- Ubuntu 22.04 (ROS2 Humble)
+- Ubuntu 24.04 (ROS2 Jazzy, Gazebo Harmonic)
 
 Current state of ROS2 port:
 
@@ -28,9 +26,9 @@ Current state of ROS2 port:
 - &cross; Port velocity smoother.
 - &check; Working Gazebo empty world, without velocity control, just standing still robot with effort controllers centered.
 - &check; Working rviz only demo.
-- &check; Working Gazebo with teleoperated robot.
-- &check; Working Gazebo demo with SLAM.
-- &check; Working Gazebo demo with nav2 integration.
+- &cross; Working Gazebo with teleoperated robot.
+- &cross; Working Gazebo demo with SLAM.
+- &cross; Working Gazebo demo with nav2 integration.
 - &cross; Code clean-up and refactoring.
 - &cross; Testing with real robot.
 - &cross; Setup-Assistant.
@@ -49,8 +47,8 @@ Current state of ROS2 port:
     rosdep update
 
     cd <your_ws>/src
-    git clone --recursive https://github.com/chvmp/champ -b ros2
-    git clone https://github.com/chvmp/champ_teleop -b ros2
+    git clone --recursive git@github.com:ravikt/champ.git
+    git clone git@github.com:chvmp/champ_teleop.git -b ros2
     cd ..
     rosdep install --from-paths src --ignore-src -r -y
 
